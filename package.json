@@ -7,5 +7,19 @@
   },
   "dependencies": {
     "express": "^4.18.2"
-  }
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liviasouzasilva/api-tarefas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liviasouzasilva/api-tarefas/issues"
+  },
+  "homepage": "https://github.com/liviasouzasilva/api-tarefas#readme",
+  "description": ""
 }
