@@ -8,10 +8,21 @@
 // - Preparar a aplicação para ser exportada
 
 import express from "express";
+// Simple CORS middleware to allow requests from the frontend dev server
+function allowCors(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  if (req.method === "OPTIONS") return res.sendStatus(204);
+  next();
+}
 import tarefaRoutes from "./routes/tarefaRoutes.js";
 
 // Cria a aplicação Express
 const app = express();
+
+// Apply CORS middleware early
+app.use(allowCors);
 
 // ========================================
 // MIDDLEWARES
